@@ -1,16 +1,22 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "amd": true,
     "es6": true,
     "browser": true,
     "node": true
   },
-  "extends": "standard",
+  "extends": ["standard", "standard-jsx"],
   "parserOptions": {
     "sourceType": "module"
   },
   "rules": {
     "react/jsx-filename-extension": 0,
-    "react/forbid-prop-types": 0
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ]
   }
 }
