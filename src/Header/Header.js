@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from './Header.css'
 
 class Header extends React.Component {
   static propTypes = {
@@ -13,7 +14,7 @@ class Header extends React.Component {
   render () {
     const { title, description } = this.props
     return (
-      <div className='Header' style={{margin: '0 0 60px 0', padding: '30px 0'}}>
+      <div className={styles.Header}>
         <div className='container'>
           <h1 className='Header-title'>{title}</h1>
           <p className='Header-description'>{description}</p>

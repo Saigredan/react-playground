@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Box.css'
 
 class Box extends React.Component {
   constructor (props) {
@@ -9,17 +10,15 @@ class Box extends React.Component {
   render () {
     const items = Object.values(this.props.items || {}).map((item) => {
       return (
-        <div>
+        <div className={styles.Box_item}>
           <h3>{item.title || 'Default title'}</h3>
           <p>{item.description || 'No description'}</p>
         </div>
       )
     })
     return (
-      <div class='container'>
-        <hr />
+      <div className='container'>
         {items}
-        <hr />
       </div>
     )
   }

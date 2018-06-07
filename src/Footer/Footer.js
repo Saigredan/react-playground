@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from './Footer.css'
 
 class Footer extends React.Component {
   static propTypes = {
@@ -18,7 +19,7 @@ class Footer extends React.Component {
   render () {
     const { author, year } = this.props
     return (
-      <div className='Footer' style={{margin: '30px 0 0 0'}}>
+      <div className={styles.Footer}>
         <div className='container'>
           <div className='row'>
             <div className='col' style={{textAlign: 'center'}}>
